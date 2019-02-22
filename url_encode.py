@@ -1,5 +1,4 @@
-# completed 2/22/2019
-# copyright Alex Clark
+# completed 2/22/2019 by Alex Clark
 # url encodes a plaintext string
 # usage: python3 encode.py 'hello, there, mr. grinch!'
 
