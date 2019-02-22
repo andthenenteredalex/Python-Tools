@@ -6,4 +6,3 @@ from urllib.request import quote
 from sys import argv
 
 print(quote(u'%s' % argv[1]))
-
