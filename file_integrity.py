@@ -48,7 +48,16 @@ with open('hash-outfile2.txt', 'r') as hash_outfile2:
     reader2 = csv.reader(hash_outfile2, delimiter='=')
     new_hashes = list(reader2) # new hashes stored in new_hashes variable
 
-
+print('''########################################################''')
+print('''######`     )###(        )####/  \#####/  \######   ####''')
+print('''#####/    #########|   |#####`    #####    `#####   ####''')
+print('''(          )#######|   |#####      ###      #####   ####''')
+print('''#####+   +#########|   |#####   #   #   #   #####   ####''')
+print('''######   ##########|   |#####   ##\   /##   ############''') 
+print('''######   #######(        )###   #########   #####   ####''')
+print('''########################################################''')
+	    
+      
 # compares new hashes to old hashes 
 for line in old_hashes:
     if line in new_hashes:
