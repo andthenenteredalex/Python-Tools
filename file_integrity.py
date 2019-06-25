@@ -9,7 +9,7 @@ from os import walk
 import hashlib
 import csv
 
-mydirectory = r'C:\users\85510\security-tools' # directory for integrity check. checks each file in this directory
+mydirectory = r'C:\users\Alex\security-tools' # directory for integrity check. checks each file in this directory
 hash_time_stamp = str(strftime("%Y-%m-%d %H:%M:%S", gmtime())) # timestamp
 
 all_files_found_in_specified_folder = []
