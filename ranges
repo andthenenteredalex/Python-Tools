@@ -1,0 +1,13 @@
+import json
+
+ranges = json.load(open('ip_ranges.json', 'r')) # import config file
+bitbucket_file = open('ip_ranges_cidr.txt', 'w')
+for i in ranges['items']:
+    if ':' in i['cidr']:
+        print(f"passing writing this: {i['cidr']}")
+    elif ':' not in i['cidr']:
+        bitbucket_file.write(i['cidr'])
+        bitbucket_file.write('\n')
+        print(i['cidr'])
+    else:
+        print(i)
