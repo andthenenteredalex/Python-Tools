@@ -1,0 +1,29 @@
+# line stripper tool
+# C:\users\85510\regex.txt
+
+import re
+import csv
+
+new_ioc_list = open(r'C:\users\andthenenteredalex\desktop\covid-iocs.txt','w')
+with open(r'C:\users\andthenenteredalex\Desktop\Iocs.csv', 'r') as f:
+    s = csv.reader(f, delimiter=',')
+    d = list(s)
+    counter = 0
+    j = len(d) - 1
+    print(j)
+    for line in d:
+        bad_chars_one ='['
+        bad_chars_two = ']'
+        if counter < 2515:
+            ioc = d[counter][0]
+            #for i in bad_chars:
+            #   ioc = ioc.replace(i,'')
+            ioc = ioc.replace(bad_chars_one,'')
+            ioc = ioc.replace(bad_chars_two,'')
+            print(ioc)
+            new_ioc_list.write(ioc)
+            new_ioc_list.write('\n')
+            counter += 1
+        else:
+            pass
+
