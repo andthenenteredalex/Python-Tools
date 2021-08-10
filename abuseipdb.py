@@ -6,6 +6,7 @@
 
 API_KEY = "XXXXXXXXXXXYOURKEYXXXXXXXXXX"
 
+from sys import argv
 import requests
 import json
 
@@ -13,8 +14,10 @@ import json
 #### begin check
 endpoint  = 'https://api.abuseipdb.com/api/v2/check'
 
+address = argv[1]
+
 query_string = {
-    'ipAddress': '104.139.84.90',
+    'ipAddress': f'{address}',
     'maxAgeInDays': '90',
     'verbose': 'yes'
 }
